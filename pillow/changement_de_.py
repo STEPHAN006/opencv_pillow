@@ -1,9 +1,6 @@
 import os, sys
 
 from PIL import Image
-im = Image.open("image.png")
-print(im.format, im.size, im.mode)
-im.show()
 
 for infile in sys.argv[1:]:
     f, e = os.path.splitext(infile)
@@ -15,8 +12,9 @@ for infile in sys.argv[1:]:
         except OSError:
             print("cannot convert", infile)
 
-
-            size = (128, 128)
+            
+'''
+d         size = (128, 128)
 
 for infile in sys.argv[1:]:
     outfile = os.path.splitext(infile)[0] + ".thumbnail"
@@ -26,4 +24,6 @@ for infile in sys.argv[1:]:
                 im.thumbnail(size)
                 im.save(outfile, "JPEG")
         except OSError:
-            print("cannot create thumbnail for", infile)
+            print("cannot create thumbnail for", infile)fg
+'''
+   
